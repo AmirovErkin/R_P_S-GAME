@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors Game</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'game/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>🪨 📄 ✂️ GAME</h1>
+        <p>Select one button and see the result:</p>
+        <div class="choices">
+            <a href="{% url 'play_game' 'rock' %}">Rock</a>
+            <a href="{% url 'play_game' 'paper' %}">Paper</a>
+            <a href="{% url 'play_game' 'scissors' %}">Scissors</a>
+        </div>
+    </div>
+</body>
+</html>
